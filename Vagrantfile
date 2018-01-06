@@ -20,4 +20,7 @@ Vagrant.configure("2") do |config|
     # Optional NFS. Make sure to remove other synced_folder line too
     #config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
 
+    # Run the init.sh script to install Wordpress
+    config.vm.provision "shell", path: "scripts/init.sh", privileged: false
+
 end
