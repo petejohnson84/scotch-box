@@ -21,6 +21,8 @@ wp plugin activate all-in-one-wp-migration
 # Configure all-in-one-wp-migration
 cd /var/www/public/wp-content
 mkdir ai1wm-backups
+cd /var/www/public/wp-content/plugins/all-in-one-wp-migration
+mkdir storage
 
 # Change php.ini upload_max_filesize
 sudo sed -i.bak "s/upload_max_filesize = 2M/upload_max_filesize = 8M/" /etc/php/7.0/apache2/php.ini
