@@ -22,5 +22,6 @@ Vagrant.configure("2") do |config|
 
     # Run the init.sh script to install Wordpress
     config.vm.provision "shell", path: "scripts/init.sh", privileged: false
+    config.vm.provision "shell", path: "scripts/custom.sh", privileged: false
 
 end
