@@ -16,6 +16,11 @@ wp core install --url=192.168.33.10 --title="WordPress Sandbox" --admin_name=adm
 
 # Install Wordpress plugins
 wp plugin install all-in-one-wp-migration
+wp plugin activate all-in-one-wp-migration
+
+# Configure all-in-one-wp-migration
+cd /var/www/public/wp-content
+mkdir ai1wm-backups
 
 # Change php.ini upload_max_filesize
 sudo sed -i.bak "s/upload_max_filesize = 2M/upload_max_filesize = 8M/" /etc/php/7.0/apache2/php.ini
