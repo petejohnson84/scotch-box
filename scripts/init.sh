@@ -9,6 +9,7 @@ sudo mv wp-cli.phar /usr/local/bin/wp
 mysql -u root -proot -e "create database if not exists wp";
 
 # Install Wordpress
+mkdir /var/www/public
 cd /var/www/public
 wp core download
 wp core config --dbhost=localhost --dbname=wp --dbuser=root --dbpass=root
