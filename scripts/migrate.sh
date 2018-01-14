@@ -2,4 +2,4 @@
 
 #!/bin/bash
 cd /var/www/public/
-#wp ai1wm restore [filename]
+ls -1 *.wpress 2>/dev/null | xargs --no-run-if-empty wp ai1wm restore
